@@ -1,25 +1,97 @@
-# 🚀 Universal Linux Updater
+# Universal Linux Updater
 
-A smart, adaptive, and fully automated bash script designed to keep your Linux distribution completely up to date, clean, and running at peak performance. 
+Have you ever wanted to update your linux system without any hassle? Maybe your distro doesnt have a built in update manager app (Like Omarchy) Maybe your update manager doesnt give you a full, complete update? Maybe you just want to update everything in one go? If any of these relate to you, well, you have come to the right place! You can update your whole system (or maintain it) in one step or simple, easy manual steps! The choice is yours! 
 
-Whether you are running **Arch/Omarchy**, **Kali**, **Ubuntu/Debian**, or **Fedora**, this tool auto-detects your operating system, automatically changes its terminal theme color to match your OS identity, and handles all updates flawlessly.
+**This is mainly an updater**, but more maintainence features are underway!
 
 ---
 
-## ⚡ Fast Installation (One-Line Execution)
+# Setup
 
-Don't want to clone the whole repository? You can download, configure, and run the script with **one single copy-and-paste command**:
+There are two ways to install this: Manually or automatically. If you prefer it to be one easy terminal command, do the automatic setup. If you prefer to see what your doing, do the manual setup. The choice is yours (as stated before).
+
+## Automatic
+
+Just copy this line and paste it into your terminal!
 
 ```bash
-curl -sSL [https://raw.githubusercontent.com/WorldHelloPrintTemp/Universal-Linux-Updater/main/super-updater.sh](https://raw.githubusercontent.com/WorldHelloPrintTemp/Universal-Linux-Updater/main/super-updater.sh) -o super-updater.sh && chmod +x super-updater.sh && ./super-updater.sh
-🛠️ Manual Installation GuideIf you prefer to clone the repository and keep the files locally, copy and paste these commands step-by-step:1. Clone the RepositoryBashgit clone [https://github.com/WorldHelloPrintTemp/Universal-Linux-Updater.git](https://github.com/WorldHelloPrintTemp/Universal-Linux-Updater.git)
+curl -sSL https://raw.githubusercontent.com/WorldHelloPrintTemp/Universal-Linux-Updater/main/update-system.sh -o update-system.sh && chmod +x update-system.sh && ./update-system.sh
+```
+## Manual
+
+All you need to do is copy these lines of code and paste them into your terminal seperately!
+
+Step 1: Grab the files from GitHub
+
+```bash
+git clone https://github.com/WorldHelloPrintTemp/Universal-Linux-Updater.git
+```
+
+Step 2: Jump into the new folder
+
+```bash
 cd Universal-Linux-Updater
-2. Grant Execution PermissionsBashchmod +x super-updater.sh
-3. Run the UtilityBash./super-updater.sh
-✨ Key Features🎨 Dynamic Theming: Automatically switches color schemes based on your detected distribution (Green for Arch/Omarchy, Blue for Kali, Amber for Debian/Ubuntu, etc.).📦 All-in-One Package Upgrades: Detects and runs upgrades for yay, pacman, apt, dnf, or zypper.🧩 Flatpak Syncing: Keeps your sandboxed application ecosystem updated in one go.🛡️ Smart Firmware Flashing: Runs fwupdmgr with NVRAM-saving flags to protect small laptop motherboard spaces (perfect for Lenovo laptops).🧹 Deep System Cleanup: Safely sweeps away orphaned packages and unused application cache layers.📊 Interactive Menu OptionsWhen you launch the tool, you will be presented with a clean, interactive menu:OptionActionIdeal For1) Standard UpdateUpdates core repository packages and system hardware drivers.Daily maintenance.2) Full-Scale UpdateUpgrades packages, Flatpaks, and motherboard/BIOS firmware.Weekly complete sync.3) Optimization & CleanupPurges leftover junk, cached data, and detached dependencies.Freeing up disk space.4) ExitSafely closes the utility.Leaving the terminal clean.⚠️ Important Note for Laptop UsersIf option 2 flags firmware database errors regarding efivarfs space (common on Lenovo laptops), the script will automatically bypass the issue safely using the --no-history block configuration. Your core drivers and kernel will remain entirely up to date!🤝 ContributingUpdates, optimization suggestions, and pull requests are always welcome! Feel free to fork the repository and open an issue if you want to add support for more distributions.⭐ If this script helped keep your system clean and updated, give it a star on GitHub!
-***
+```
 
-### 💡 Pro-Tip for your GitHub Repository:
-Make sure that when you upload your script file to GitHub, you name it exactly `super-updater.sh` and that it sits in the main folder. That way, the mega one-line `curl` command at the top of the README will work perfectly for anyone who visits your page! 
+Step 3: Give the script permission to run
 
-`Universal Linux Updater` is a phenomenal, clean name choice. Your repository is going to look awesome!
+```bash
+chmod +x update-system.sh
+```
+
+Step 4: Execute the script!
+
+```bash
+./update-system.sh
+```
+
+---
+
+And there you have it! No matter what setup you did, you can just run
+```bash
+./update-system.sh
+```
+Any time you want to reuse the script!
+
+---
+
+# What makes this maintenance script so special?
+
+•**🎨Dynamic Theming:** This script automatically changes colour scheme of the script depending on what distro your using (For example, if your using Omarchy it will be a nice, green colour).
+
+•**📦 All-in-One Package upgrades:** It finds your package manager (like yay, pacman, apt, dnf, or zypper) and triggers the right update sequences.
+
+•**🧩 Flatpak Syncing:** It keeps all your standalone Flatpak apps (like Steam, Discord, and so on) updated!
+
+•**🛡️ Laptop Firmware Flashing:** It looks for motherboard/BIOS updates using fwupdmgr with flags to hopefully prevent errors.
+
+•**🧹 Deep Rubbish Cleanup:** It deletes old, unused packages and unused application cache layers that are just staying, sleeping on your drive
+
+---
+# 📊 What the Menu Looks Like?
+
+when you launch this tool, you will get an interactive text menu. Here is what to expect:
+
+
+| Option | What it does | When to use it |
+| -------- | -------- | -------- |
+| 1) Standard Update  | Updates your core system packages and hardware drivers  | Perfect for a quick, daily check  |
+| 2) Full-Scale Update | Upgrades everything: system packages, Flatpaks, and BIOS firmware  | Great for a weekly total sync. |
+| 3) Optimization & Cleanup  |  Deletes leftover rubbish files, unused cache, and other files. | Use this when you need extra storage space. |
+| 4) Exit  | Safely exits the tool. | When you're all done! |
+
+---
+
+# ⚠️ A Quick Note for Laptop Users
+
+If you select full upgrade (Option 2) and your terminals complaining about "efivarfs space", dont panic! The script is designed to automatically bypass this common hardware roadblock. Your actual drivers and kernal updates will install completely fine!
+
+---
+
+# 🤝 Want to help make it better?
+
+This is an open source project, so updates, optinizatino suggestions, and pull request are, of course, welcome! Feel free to fork the repo, and maybe even improve it yourself! 
+
+---
+
+**⭐ If this script helped you in any way, please press that star button on the page. You dont have to but I would be very greatful!⭐**
