@@ -1,23 +1,23 @@
-# Universal Linux Updater
+# Universal Linux Updater 🐧
 
-Have you ever wanted to update your linux system without any hassle? Maybe your distro doesnt have a built in update manager app (Like Omarchy) Maybe your update manager doesnt give you a full, complete update? Maybe you just want to update everything in one go? If any of these relate to you, well, you have come to the right place! You can update your whole system (or maintain it) in one step or simple, easy manual steps! The choice is yours! 
+Have you ever wanted to update your linux system without any hassle? 💻 Maybe your distro doesnt have a built in update manager app (Like Omarchy) Maybe your update manager doesnt give you a full, complete update? Maybe you just want to update everything in one go? If any of these relate to you, well, you have come to the right place! ⚙️ You can update your whole system (or maintain it) in one step or simple, easy manual steps! The choice is yours! 🙌
 
 **This is mainly an updater**, but more maintainence features are underway!
 
 ---
 
-# Setup
+# Setup 🛠️
 
 There are two ways to install this: Manually or automatically. If you prefer it to be one easy terminal command, do the automatic setup. If you prefer to see what your doing, do the manual setup. The choice is yours (as stated before).
 
-## Automatic
+## Automatic 🔧
 
 Just copy this line and paste it into your terminal!
 
 ```bash
 curl -sSL https://raw.githubusercontent.com/WorldHelloPrintTemp/Universal-Linux-Updater/main/update-system.sh -o update-system.sh && chmod +x update-system.sh && ./update-system.sh
 ```
-## Manual
+## Manual 📜
 
 All you need to do is copy these lines of code and paste them into your terminal seperately!
 
@@ -39,7 +39,7 @@ Step 3: Give the script permission to run
 chmod +x update-system.sh
 ```
 
-Step 4: Execute the script!
+Step 4: Execute the script! 🧠
 
 ```bash
 ./update-system.sh
