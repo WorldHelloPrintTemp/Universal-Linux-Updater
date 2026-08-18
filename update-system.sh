@@ -1,16 +1,10 @@
 #!/usr/bin/env bash
 
-# ==========================================
-# 1. DISTRO DETECTION & COLOR THEMING
-# ==========================================
-
-# Default colors if detection fails
 THEME_COLOR='\033[0;36m' # Cyan
 NC='\033[0m'             # No Color
 RED='\033[0;31m'
 YELLOW='\033[1;33m'
 
-# Check the /etc/os-release file to find out what OS we are running
 if [ -f /etc/os-release ]; then
     . /etc/os-release
     DISTRO_ID=$ID
@@ -19,25 +13,20 @@ else
     DISTRO_ID="unknown"
 fi
 
-# Set custom theme colors based on the distro identity
 case "$DISTRO_ID" in
     *omarchy*|*arch*)
-        # Arch/Omarchy gets a nice Minty Green / Cyan look
         THEME_COLOR='\033[0;32m'
         DISTRO_NAME="Arch / Omarchy Linux"
         ;;
     *kali*)
-        # Kali gets a Deep Blue look
         THEME_COLOR='\033[0;34m'
         DISTRO_NAME="Kali Linux"
         ;;
     *ubuntu*|*debian*)
-        # Ubuntu/Debian gets an Orange/Red look
         THEME_COLOR='\033[0;33m'
         DISTRO_NAME="Debian / Ubuntu"
         ;;
     *fedora*)
-        # Fedora gets a bright Blue look
         THEME_COLOR='\033[1;34m'
         DISTRO_NAME="Fedora"
         ;;
